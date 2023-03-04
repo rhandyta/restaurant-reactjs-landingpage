@@ -1,4 +1,4 @@
-import { TakeoutDining } from "@mui/icons-material";
+import { TakeoutDining, Menu as MenuIcon } from "@mui/icons-material";
 import {
     AppBar,
     Avatar,
@@ -12,6 +12,7 @@ import {
     Typography,
 } from "@mui/material";
 import React, { useState } from "react";
+import Menu from "./Menu";
 
 const NavToolbar = styled(Toolbar)(({ theme }) => ({
     color: theme.palette.text.primary,
@@ -19,6 +20,15 @@ const NavToolbar = styled(Toolbar)(({ theme }) => ({
 }));
 
 function Navbar() {
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = (event) => {
+        setAnchorEl(null);
+    };
+
     return (
         <AppBar
             sx={{ bgcolor: "transparent", boxShadow: "none" }}
@@ -37,13 +47,21 @@ function Navbar() {
                         <TakeoutDining
                             color="inherit"
                             sx={{
-                                fontSize: 25,
+                                fontSize: {
+                                    xs: 20,
+                                    sm: 25,
+                                },
                             }}
                         />
                         <Typography
                             variant="h6"
                             color="inherit"
-                            sx={{ fontSize: 20 }}
+                            sx={{
+                                fontSize: {
+                                    xs: 20,
+                                    sm: 25,
+                                },
+                            }}
                         >
                             RESTAURANT
                         </Typography>
@@ -82,20 +100,43 @@ function Navbar() {
                             Contact
                         </Link>
                     </Box>
-                    <Button
-                        variant="outlined"
-                        color="inherit"
-                        sx={{
-                            fontWeight: 600,
-                            borderRadius: 10,
-                            display: {
-                                xs: "none",
-                                sm: "flex",
-                            },
-                        }}
-                    >
-                        Login
-                    </Button>
+                    <Box>
+                        <Button
+                            variant="outlined"
+                            color="inherit"
+                            size="small"
+                            sx={{
+                                fontWeight: 600,
+                                borderRadius: 10,
+                                display: {
+                                    xs: "none",
+                                    sm: "flex",
+                                },
+                            }}
+                        >
+                            Login
+                        </Button>
+                        <Button
+                            onClick={handleClick}
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            sx={{
+                                boxShadow: "none",
+                                display: {
+                                    xs: "block",
+                                    sm: "none",
+                                },
+                            }}
+                        >
+                            <MenuIcon />
+                        </Button>
+                        <Menu
+                            handleClose={handleClose}
+                            open={open}
+                            anchorEl={anchorEl}
+                        />
+                    </Box>
                 </NavToolbar>
             </Container>
         </AppBar>

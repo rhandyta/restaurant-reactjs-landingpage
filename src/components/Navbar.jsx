@@ -57,8 +57,8 @@ function Navbar() {
                             },
                             justifyContent: "end",
                             gap: {
-                                sm: 3,
-                                md: 8,
+                                sm: 2,
+                                md: 6,
                             },
                             mx: {
                                 sm: 3,
@@ -82,21 +82,20 @@ function Navbar() {
                             Contact
                         </Link>
                     </Box>
-                    <Box>
-                        <Button
-                            variant="outlined"
-                            color="inherit"
-                            sx={{
-                                borderRadius: 10,
-                                display: {
-                                    xs: "none",
-                                    sm: "flex",
-                                },
-                            }}
-                        >
-                            Login
-                        </Button>
-                    </Box>
+                    <Button
+                        variant="outlined"
+                        color="inherit"
+                        sx={{
+                            fontWeight: 600,
+                            borderRadius: 10,
+                            display: {
+                                xs: "none",
+                                sm: "flex",
+                            },
+                        }}
+                    >
+                        Login
+                    </Button>
                 </NavToolbar>
             </Container>
         </AppBar>

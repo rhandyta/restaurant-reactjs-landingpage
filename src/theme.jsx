@@ -5,7 +5,7 @@ export const theme = createTheme({
         values: {
             xs: 0,
             sm: 680,
-            md: 900,
+            md: 890,
             lg: 1200,
             xl: 1536,
         },
@@ -30,7 +30,7 @@ export const theme = createTheme({
         },
     },
     typography: {
-        fontFamily: "Roboto, sans-serif",
+        fontFamily: "Merriweather, sans-serif",
         h1: {
             fontWeight: 700,
             fontSize: "2.5rem",

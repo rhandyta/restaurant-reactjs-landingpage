@@ -122,14 +122,18 @@ function Navbar() {
                             size="small"
                             color="primary"
                             sx={{
+                                fontSize: "1rem",
+                                p: 0,
                                 boxShadow: "none",
+                                bgcolor: "transparent",
                                 display: {
-                                    xs: "block",
+                                    xs: "flex",
                                     sm: "none",
                                 },
+                                justifyContent: "center",
                             }}
                         >
-                            <MenuIcon />
+                            <MenuIcon sx={{ fontSize: "2rem" }} />
                         </Button>
                         <Menu
                             handleClose={handleClose}

@@ -13,9 +13,7 @@ function Menu({ open, anchorEl, handleClose }) {
             transformOrigin={{ vertical: "top", horizontal: "right" }}
             anchorOrigin={{ vertical: "top", horizontal: "right" }}
         >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <MenuItem onClick={handleClose}>Login</MenuItem>
         </MenuButton>
     );
 }

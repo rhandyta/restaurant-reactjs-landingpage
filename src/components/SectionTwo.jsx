@@ -7,7 +7,14 @@ import CardFood from "./CardFood";
 
 function SectionTwo() {
     return (
-        <Box height="100vh">
+        <Box
+            sx={{
+                height: {
+                    xs: "auto",
+                    sm: "100vh",
+                },
+            }}
+        >
             <Stack direction="column" alignItems="center">
                 <Typography variant="h5" color="#ffc400" component="h6">
                     Delicious
@@ -25,6 +32,7 @@ function SectionTwo() {
                     variant="body1"
                     color="text.secondary"
                     textAlign="center"
+                    color="text.secondary"
                     sx={{
                         maxWidth: {
                             xs: 480,

@@ -19,6 +19,7 @@ function CardFood({ imageUrl, nameFood, descriptionFood }) {
                 fontSize={14}
                 fontWeight={400}
                 lineHeight={2}
+                color="text.secondary"
             >
                 {descriptionFood}
             </Typography>

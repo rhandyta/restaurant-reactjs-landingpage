@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import BackgroundImageHero from "../assets/background.avif";
 import SectionOne from "../components/SectionOne";
 import SectionTwo from "../components/SectionTwo";
+import SectionThree from "../components/SectionThree";
 
 function LandingPage() {
     return (
@@ -22,6 +23,7 @@ function LandingPage() {
                 <Container sx={{ height: "100%" }}>
                     <SectionOne />
                     <SectionTwo />
+                    <SectionThree />
                 </Container>
             </Box>
         </>

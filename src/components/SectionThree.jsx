@@ -84,8 +84,7 @@ function SectionThree() {
                 <Typography
                     variant="body1"
                     color="text.secondary"
-                    maxWidth="90%"
-                    textAlign="justify"
+                    textAlign="center"
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Inventore, obcaecati debitis? Recusandae unde molestias

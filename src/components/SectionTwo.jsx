@@ -3,6 +3,7 @@ import Pancake from "../assets/pancake.png";
 import Pancake2 from "../assets/pancake2.png";
 import Pancake3 from "../assets/pancake3.png";
 import React from "react";
+import CardFood from "./CardFood";
 
 function SectionTwo() {
     return (
@@ -23,6 +24,7 @@ function SectionTwo() {
                 <Typography
                     variant="body1"
                     color="text.secondary"
+                    textAlign="center"
                     sx={{
                         maxWidth: {
                             xs: 480,
@@ -50,71 +52,21 @@ function SectionTwo() {
                 }}
                 mt={5}
             >
-                <Box textAlign="center" maxWidth={250}>
-                    <Box
-                        height={200}
-                        width={250}
-                        sx={{
-                            backgroundImage: `url(${Pancake2})`,
-                        }}
-                    ></Box>
-                    <Typography variant="h6" fontWeight={600}>
-                        Delicious Pancake
-                    </Typography>
-                    <Typography
-                        variant="body1"
-                        fontSize={14}
-                        fontWeight={400}
-                        lineHeight={2}
-                    >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Blanditiis, veniam.
-                    </Typography>
-                </Box>
-                <Box textAlign="center" maxWidth={250}>
-                    <Box
-                        height={200}
-                        width={250}
-                        sx={{
-                            backgroundImage: `url(${Pancake3})`,
-                            backgroundPosition: "center",
-                        }}
-                    ></Box>
-                    <Typography variant="h6" fontWeight={600}>
-                        Delicious Pancake
-                    </Typography>
-                    <Typography
-                        variant="body1"
-                        fontSize={14}
-                        fontWeight={400}
-                        lineHeight={2}
-                    >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Blanditiis, veniam.
-                    </Typography>
-                </Box>
-                <Box textAlign="center" maxWidth={250}>
-                    <Box
-                        height={200}
-                        width={250}
-                        sx={{
-                            backgroundImage: `url(${Pancake})`,
-                            backgroundPosition: "center",
-                        }}
-                    ></Box>
-                    <Typography variant="h6" fontWeight={600}>
-                        Delicious Pancake
-                    </Typography>
-                    <Typography
-                        variant="body1"
-                        fontSize={14}
-                        fontWeight={400}
-                        lineHeight={2}
-                    >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Blanditiis, veniam.
-                    </Typography>
-                </Box>
+                <CardFood
+                    imageUrl={Pancake}
+                    nameFood="Delicious Pancake"
+                    descriptionFood="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, possimus."
+                />
+                <CardFood
+                    imageUrl={Pancake2}
+                    nameFood="Delicious Pancake"
+                    descriptionFood="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, possimus."
+                />
+                <CardFood
+                    imageUrl={Pancake3}
+                    nameFood="Delicious Pancake"
+                    descriptionFood="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, possimus."
+                />
             </Stack>
         </Box>
     );

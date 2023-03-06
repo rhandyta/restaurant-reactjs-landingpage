@@ -66,7 +66,19 @@ function SectionOne() {
                     Eveniet optio dolores error fugit aspernatur, culpa maxime
                     cum.
                 </Typography>
-                <StyledButton variant="contained">EXPLORER NOW</StyledButton>
+                <StyledButton
+                    variant="contained"
+                    sx={{
+                        px: {
+                            xs: 2,
+                            sm: 4,
+                        },
+                        py: 1.5,
+                        borderRadius: 20,
+                    }}
+                >
+                    EXPLORER NOW
+                </StyledButton>
             </Stack>
         </Stack>
     );

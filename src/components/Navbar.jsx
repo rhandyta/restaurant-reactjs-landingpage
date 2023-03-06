@@ -1,10 +1,10 @@
-import { TakeoutDining, Menu as MenuIcon } from "@mui/icons-material";
+import { TakeoutDining, Menu as MenuIcon, Close } from "@mui/icons-material";
 import {
     AppBar,
-    Avatar,
     Box,
     Button,
     Container,
+    IconButton,
     Link,
     Stack,
     styled,
@@ -116,11 +116,10 @@ function Navbar() {
                         >
                             Login
                         </Button>
-                        <Button
+                        <IconButton
                             onClick={handleClick}
                             variant="contained"
                             size="small"
-                            color="primary"
                             sx={{
                                 fontSize: "1rem",
                                 p: 0,
@@ -133,8 +132,12 @@ function Navbar() {
                                 justifyContent: "center",
                             }}
                         >
-                            <MenuIcon sx={{ fontSize: "2rem" }} />
-                        </Button>
+                            {open ? (
+                                <Close sx={{ fontSize: "2rem" }} />
+                            ) : (
+                                <MenuIcon sx={{ fontSize: "2rem" }} />
+                            )}
+                        </IconButton>
                         <Menu
                             handleClose={handleClose}
                             open={open}

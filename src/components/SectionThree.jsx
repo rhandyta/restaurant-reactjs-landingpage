@@ -86,9 +86,8 @@ function SectionThree() {
                     color="text.secondary"
                     textAlign="center"
                 >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Inventore, obcaecati debitis? Recusandae unde molestias
-                    facilis.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Praesentium rem eius cupiditate ipsam quas molestias.
                 </Typography>
             </Stack>
         </Box>

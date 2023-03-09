@@ -1,5 +1,5 @@
 import { RestaurantMenu } from "@mui/icons-material";
-import { Box, Stack, styled, Typography } from "@mui/material";
+import { Box, Grid, Stack, styled, Typography } from "@mui/material";
 import Egg from "../assets/egg.avif";
 import React from "react";
 
@@ -14,6 +14,8 @@ const StyledImg = styled("img")(({ theme }) => ({
         borderRadius: "200px",
     },
 }));
+
+const StyledGridImage = styled(<Grid item />)(({ theme }) => ({}));
 
 function SectionThree() {
     return (
@@ -90,6 +92,19 @@ function SectionThree() {
                     Praesentium rem eius cupiditate ipsam quas molestias.
                 </Typography>
             </Stack>
+            <Box mt={5}>
+                <Grid container>
+                    <Grid item xs>
+                        sadasd
+                    </Grid>
+                    <Grid item xs>
+                        asasd
+                    </Grid>
+                    <Grid item xs>
+                        asdas
+                    </Grid>
+                </Grid>
+            </Box>
         </Box>
     );
 }

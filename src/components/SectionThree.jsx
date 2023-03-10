@@ -2,6 +2,7 @@ import { RestaurantMenu } from "@mui/icons-material";
 import { Box, Grid, Stack, styled, Typography } from "@mui/material";
 import Egg from "../assets/egg.avif";
 import React from "react";
+import Fruit_Basket from "../assets/fruit_basket.png";
 
 const StyledImg = styled("img")(({ theme }) => ({
     objectFit: "cover",
@@ -15,7 +16,22 @@ const StyledImg = styled("img")(({ theme }) => ({
     },
 }));
 
-const StyledGridImage = styled(<Grid item />)(({ theme }) => ({}));
+const TitleFoodCategories = styled(({ ...props }) => (
+    <Typography variant="h6" {...props} />
+))(({ theme }) => ({
+    fontSize: 40,
+}));
+const TextFoodCategories = styled(({ ...props }) => (
+    <Typography variant="h5" {...props} />
+))(({ theme }) => ({
+    fontSize: 50,
+    fontWeight: 600,
+}));
+const ContentFoodCategories = styled(({ ...props }) => (
+    <Typography variant="body1" {...props} />
+))(({ theme }) => ({
+    color: theme.palette.text.secondary,
+}));
 
 function SectionThree() {
     return (
@@ -92,16 +108,35 @@ function SectionThree() {
                     Praesentium rem eius cupiditate ipsam quas molestias.
                 </Typography>
             </Stack>
-            <Box mt={5}>
-                <Grid container>
-                    <Grid item xs>
-                        sadasd
+            <Box mt={10}>
+                <Grid container alignItems="center">
+                    <Grid item xs={12} sm={6} order={{ xs: 2, sm: 1 }} p={10}>
+                        <TitleFoodCategories color="#ffc400">
+                            Veggie Life
+                        </TitleFoodCategories>
+                        <TextFoodCategories>
+                            Simple way of Eating delicious
+                        </TextFoodCategories>
+                        <ContentFoodCategories>
+                            Keep healthy food readily available when you get
+                            hungry, you are more likely to eat the first things
+                            you see on the counter
+                        </ContentFoodCategories>
                     </Grid>
-                    <Grid item xs>
-                        asasd
+                    <Grid item xs={12} sm={6} order={{ xs: 1, sm: 2 }}>
+                        <img
+                            src={Fruit_Basket}
+                            alt="fruit basket"
+                            style={{
+                                objectFit: "cover",
+                            }}
+                        />
                     </Grid>
-                    <Grid item xs>
-                        asdas
+                    <Grid item xs={12} sm={6} order={{ xs: 3, sm: 3 }}>
+                        gambar 2
+                    </Grid>
+                    <Grid item xs={12} sm={6} order={{ xs: 4, sm: 4 }}>
+                        kata 2
                     </Grid>
                 </Grid>
             </Box>

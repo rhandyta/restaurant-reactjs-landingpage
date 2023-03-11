@@ -16,7 +16,7 @@ function SectionTwo() {
             }}
         >
             <Stack direction="column" alignItems="center">
-                <Typography variant="h5" color="#ffc400" component="h6">
+                <Typography variant="h5" component="h6" color="warning.main">
                     Delicious
                 </Typography>
                 <Typography
@@ -32,7 +32,6 @@ function SectionTwo() {
                     variant="body1"
                     color="text.secondary"
                     textAlign="center"
-                    color="text.secondary"
                     sx={{
                         maxWidth: {
                             xs: 480,

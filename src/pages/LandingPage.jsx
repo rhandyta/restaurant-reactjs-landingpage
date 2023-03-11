@@ -5,6 +5,7 @@ import BackgroundImageHero from "../assets/background.avif";
 import SectionOne from "../components/SectionOne";
 import SectionTwo from "../components/SectionTwo";
 import SectionThree from "../components/SectionThree";
+import SectionFour from "../components/SectionFour";
 
 function LandingPage() {
     return (
@@ -24,6 +25,7 @@ function LandingPage() {
                     <SectionOne />
                     <SectionTwo />
                     <SectionThree />
+                    <SectionFour />
                 </Container>
             </Box>
         </>

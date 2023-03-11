@@ -35,8 +35,8 @@ const TitleFoodCategories = styled(({ ...props }) => (
     [theme.breakpoints.up("xs")]: {
         fontSize: 20,
     },
-    [theme.breakpoints.up("sm")]: {
-        fontSize: 40,
+    [theme.breakpoints.up("md")]: {
+        fontSize: 28,
     },
     color: theme.palette[color]?.main || color || "inherit",
 }));
@@ -47,8 +47,8 @@ const TextFoodCategories = styled(({ ...props }) => (
     [theme.breakpoints.up("xs")]: {
         fontSize: 30,
     },
-    [theme.breakpoints.up("sm")]: {
-        fontSize: 50,
+    [theme.breakpoints.up("md")]: {
+        fontSize: 40,
     },
 }));
 const ContentFoodCategories = styled(({ ...props }) => (
@@ -68,7 +68,7 @@ function SectionThree() {
             }}
         >
             <Stack direction="column" alignItems="center">
-                <RestaurantMenu sx={{ color: "#ffc400", fontSize: 35 }} />
+                <RestaurantMenu sx={{ fontSize: 35 }} color="warning" />
                 <Typography
                     variant="h4"
                     component="h5"
@@ -133,8 +133,26 @@ function SectionThree() {
                 </Typography>
             </Stack>
             <Box mt={10}>
-                <Grid container alignItems="center">
-                    <Grid item xs={12} sm={6} order={{ xs: 2, sm: 1 }} p={10}>
+                <Grid container alignItems="center" spacing={2}>
+                    <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        sx={{
+                            textAlign: {
+                                xs: "center",
+                                md: "left",
+                            },
+                        }}
+                        order={{
+                            xs: 2,
+                            md: 1,
+                            p: {
+                                xs: 0,
+                                md: 10,
+                            },
+                        }}
+                    >
                         <TitleFoodCategories color="warning">
                             Veggie Life
                         </TitleFoodCategories>
@@ -157,8 +175,8 @@ function SectionThree() {
                     <Grid
                         item
                         xs={12}
-                        sm={6}
-                        order={{ xs: 1, sm: 2 }}
+                        md={6}
+                        order={{ xs: 1, md: 2 }}
                         textAlign="center"
                     >
                         <StyledImageCategories
@@ -169,23 +187,38 @@ function SectionThree() {
                     <Grid
                         item
                         xs={12}
-                        sm={6}
-                        order={{ xs: 3, sm: 3 }}
+                        md={6}
+                        order={{ xs: 3, md: 3 }}
                         textAlign="center"
                     >
                         <StyledImageCategories src={Onion} alt="fruit basket" />
                     </Grid>
-                    <Grid item xs={12} sm={6} order={{ xs: 4, sm: 4 }} p={10}>
+                    <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        sx={{
+                            textAlign: {
+                                xs: "center",
+                                md: "left",
+                            },
+                        }}
+                        order={{
+                            xs: 4,
+                            md: 4,
+                        }}
+                    >
                         <TitleFoodCategories color="success">
                             Veggie Life
                         </TitleFoodCategories>
                         <TextFoodCategories>
-                            Simple way of Eating delicious
+                            All in good taste Food with vegetables
                         </TextFoodCategories>
                         <ContentFoodCategories>
-                            Keep healthy food readily available when you get
-                            hungry, you are more likely to eat the first things
-                            you see on the counter
+                            plants can use sunlight, air and water to synthesize
+                            the nutrients the need through light cooperation.
+                            which can maintain out life activities, and this a
+                            good source of nutrients.
                         </ContentFoodCategories>
                         <Button
                             variant="outlined"

@@ -9,9 +9,9 @@ function SectionTwo() {
     return (
         <Box
             sx={{
-                height: {
-                    xs: "auto",
-                    sm: "100vh",
+                height: "auto",
+                mb: {
+                    sm: 5,
                 },
             }}
         >

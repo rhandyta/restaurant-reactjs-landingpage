@@ -1,8 +1,9 @@
 import { RestaurantMenu } from "@mui/icons-material";
-import { Box, Grid, Stack, styled, Typography } from "@mui/material";
+import { Box, Button, Grid, Stack, styled, Typography } from "@mui/material";
 import Egg from "../assets/egg.avif";
 import React from "react";
 import Fruit_Basket from "../assets/fruit_basket.png";
+import Onion from "../assets/onion.png";
 
 const StyledImg = styled("img")(({ theme }) => ({
     objectFit: "cover",
@@ -16,16 +17,39 @@ const StyledImg = styled("img")(({ theme }) => ({
     },
 }));
 
+const StyledImageCategories = styled("img")(({ theme }) => ({
+    [theme.breakpoints.up("xs")]: {
+        width: 150,
+        height: 150,
+    },
+    [theme.breakpoints.up("sm")]: {
+        width: 250,
+        height: 250,
+    },
+    objectFit: "cover",
+}));
+
 const TitleFoodCategories = styled(({ ...props }) => (
     <Typography variant="h6" {...props} />
-))(({ theme }) => ({
-    fontSize: 40,
+))(({ theme, color }) => ({
+    [theme.breakpoints.up("xs")]: {
+        fontSize: 20,
+    },
+    [theme.breakpoints.up("sm")]: {
+        fontSize: 40,
+    },
+    color: theme.palette[color]?.main || color || "inherit",
 }));
 const TextFoodCategories = styled(({ ...props }) => (
     <Typography variant="h5" {...props} />
 ))(({ theme }) => ({
-    fontSize: 50,
     fontWeight: 600,
+    [theme.breakpoints.up("xs")]: {
+        fontSize: 30,
+    },
+    [theme.breakpoints.up("sm")]: {
+        fontSize: 50,
+    },
 }));
 const ContentFoodCategories = styled(({ ...props }) => (
     <Typography variant="body1" {...props} />
@@ -111,7 +135,7 @@ function SectionThree() {
             <Box mt={10}>
                 <Grid container alignItems="center">
                     <Grid item xs={12} sm={6} order={{ xs: 2, sm: 1 }} p={10}>
-                        <TitleFoodCategories color="#ffc400">
+                        <TitleFoodCategories color="warning">
                             Veggie Life
                         </TitleFoodCategories>
                         <TextFoodCategories>
@@ -122,21 +146,54 @@ function SectionThree() {
                             hungry, you are more likely to eat the first things
                             you see on the counter
                         </ContentFoodCategories>
+                        <Button
+                            variant="outlined"
+                            color="warning"
+                            sx={{ mt: 2 }}
+                        >
+                            Explorer Our Story
+                        </Button>
                     </Grid>
-                    <Grid item xs={12} sm={6} order={{ xs: 1, sm: 2 }}>
-                        <img
+                    <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        order={{ xs: 1, sm: 2 }}
+                        textAlign="center"
+                    >
+                        <StyledImageCategories
                             src={Fruit_Basket}
                             alt="fruit basket"
-                            style={{
-                                objectFit: "cover",
-                            }}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} order={{ xs: 3, sm: 3 }}>
-                        gambar 2
+                    <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        order={{ xs: 3, sm: 3 }}
+                        textAlign="center"
+                    >
+                        <StyledImageCategories src={Onion} alt="fruit basket" />
                     </Grid>
-                    <Grid item xs={12} sm={6} order={{ xs: 4, sm: 4 }}>
-                        kata 2
+                    <Grid item xs={12} sm={6} order={{ xs: 4, sm: 4 }} p={10}>
+                        <TitleFoodCategories color="success">
+                            Veggie Life
+                        </TitleFoodCategories>
+                        <TextFoodCategories>
+                            Simple way of Eating delicious
+                        </TextFoodCategories>
+                        <ContentFoodCategories>
+                            Keep healthy food readily available when you get
+                            hungry, you are more likely to eat the first things
+                            you see on the counter
+                        </ContentFoodCategories>
+                        <Button
+                            variant="outlined"
+                            color="success"
+                            sx={{ mt: 2 }}
+                        >
+                            Explorer Our Story
+                        </Button>
                     </Grid>
                 </Grid>
             </Box>

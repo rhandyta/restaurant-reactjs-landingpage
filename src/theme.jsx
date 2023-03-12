@@ -7,15 +7,6 @@ export const theme = createTheme(() => {
         palette: {
             mode: mode,
         },
-        breakpoints: {
-            values: {
-                xs: 0,
-                sm: 680,
-                md: 890,
-                lg: 1200,
-                xl: 1536,
-            },
-        },
         palette: {
             primary: {
                 main: "#D32F2F", // merah tua

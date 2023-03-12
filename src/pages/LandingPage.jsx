@@ -6,6 +6,7 @@ import SectionOne from "../components/SectionOne";
 import SectionTwo from "../components/SectionTwo";
 import SectionThree from "../components/SectionThree";
 import SectionFour from "../components/SectionFour";
+import Footer from "../components/Footer";
 
 function LandingPage() {
     return (
@@ -26,6 +27,7 @@ function LandingPage() {
                     <SectionTwo />
                     <SectionThree />
                     <SectionFour />
+                    <Footer />
                 </Container>
             </Box>
         </>

@@ -5,8 +5,10 @@ import LandingPage from "../pages/LandingPage";
 function Router() {
     return (
         <Routes>
+
             <Route index element={<LandingPage />} />
-        </Routes>
+       <Route path="login" element={<Login/>}
+ </Routes>
     );
 }
 

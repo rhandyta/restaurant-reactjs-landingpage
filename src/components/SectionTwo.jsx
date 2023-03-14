@@ -59,7 +59,7 @@ function SectionTwo() {
                 }}
                 mt={5}
             >
-                <CardFood
+               <CardFood
                     imageUrl={Pancake}
                     nameFood="Delicious Pancake"
                     descriptionFood="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, possimus."

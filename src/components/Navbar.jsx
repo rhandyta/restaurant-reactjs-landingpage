@@ -101,21 +101,23 @@ function Navbar() {
                         </Link>
                     </Box>
                     <Box>
-                        <Button
-                            variant="outlined"
-                            color="inherit"
-                            size="small"
-                            sx={{
-                                fontWeight: 600,
-                                borderRadius: 10,
-                                display: {
-                                    xs: "none",
-                                    sm: "flex",
-                                },
-                            }}
-                        >
-                            Login
-                        </Button>
+                        <Link href="/login" underline="none" color="inherit">
+                            <Button
+                                variant="outlined"
+                                color="inherit"
+                                size="small"
+                                sx={{
+                                    fontWeight: 600,
+                                    borderRadius: 10,
+                                    display: {
+                                        xs: "none",
+                                        sm: "flex",
+                                    },
+                                }}
+                            >
+                                Login
+                            </Button>
+                        </Link>
                         <IconButton
                             onClick={handleClick}
                             variant="contained"
